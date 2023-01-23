@@ -8,8 +8,10 @@ describe 'who is the biggest number' do
     expect(who_is_bigger(84, 42, 21)).to eq("a is bigger")
     expect(who_is_bigger(42, 84, 21)).to eq("b is bigger")
     expect(who_is_bigger(42, 21, 84)).to eq("c is bigger")
+    expect(who_is_bigger(42, 21, 84)).to eq("c is bigger")
   end
 end
+
 
 describe 'crazy stuff on strings' do
   # Reverse, upcase then removes all L, T and A.
@@ -24,7 +26,6 @@ describe 'crazy stuff on strings' do
   end
 end
 
-
 describe '42 finder' do
   # array_42 takes an array as parameter and returns:
   # - true if there's a 42 in the array items
@@ -34,6 +35,7 @@ describe '42 finder' do
   it 'finds 42' do
     expect(array_42([1, 2, 3, 4, 5, 6, 7 , 8, 9, 10])).to eq false
     expect(array_42([1, 2, 3, 4, 5, 6, 7 , 8, 9, 42, 21, 10.5])).to eq true
+    expect(array_42([42.1, 2, 41, 4, 5, 6, 7 , 8, 9, 41, 21, 10.5])).to eq false
   end
 end
 
@@ -49,11 +51,8 @@ describe 'crazy stuff on arrays' do
   # - sorted
   # BONUS : You can do this in one line less than 55 chars
   it 'does crazy stuff on Arrays' do
-    expect(magic_array([1, 2, 3, 4, 5, 6]))
-      .to eq([2, 4, 8, 10])
-    expect(magic_array([1, [2, 3], 4, 5, 6, 23, 31, [1, 2, 3]]))
-      .to eq([2, 4, 8, 10, 46, 62])
-    expect(magic_array([[32, 54], [48, 12], [21, [1, 2, [3]]], 7, 8]))
-      .to eq([2, 4, 14, 16, 64])
+    expect(magic_array([1, 2, 3, 4, 5, 5, 6])) .to eq([2, 4, 8, 10])
+    expect(magic_array([1, [2, 3], 4, 5, 6, 23, 31, [1, 2, 3]])) .to eq([2, 4, 8, 10, 46, 62])
+    expect(magic_array([[32, 54], [48, 12], [21, [1, 2, [3]]], 7, 8])).to eq([2, 4, 14, 16, 64])
   end
 end

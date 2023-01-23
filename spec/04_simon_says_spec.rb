@@ -25,10 +25,11 @@ describe "Simon says" do
     it "should repeat" do
       expect(repeat("hello")).to eq("hello hello")
     end
+  end
+
 
     # Wait a second! How can you make the "repeat" method
     # take one *or* two arguments?
-    #
     # Hint: *default values* https://www.skorks.com/2009/08/method-arguments-in-ruby/
     it "should repeat a number of times" do
       expect(repeat("hello", 3)).to eq("hello hello hello")
@@ -52,6 +53,7 @@ describe "Simon says" do
     end
   end
 
+
   describe "first_word" do
     it "tells us the first word of 'Hello World' is 'Hello'" do
       expect(first_word("Hello World")).to eq("Hello")
@@ -62,7 +64,7 @@ describe "Simon says" do
     end
   end
 
-  describe "titleize" do
+   describe "titleize" do
     it "capitalizes a word" do
       expect(titleize("jaws")).to eq("Jaws")
     end
@@ -80,4 +82,3 @@ describe "Simon says" do
     end
   end
 
-end
